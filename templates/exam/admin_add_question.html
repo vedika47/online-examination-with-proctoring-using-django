@@ -1,0 +1,24 @@
+{% extends 'exam/adminbase.html' %}
+{% load widget_tweaks %}
+{% block content %}
+  <head>
+    <!-- Add your head content here -->
+  </head>
+  <h2 style="text-align:center;">Add Question</h2>
+  <form method="POST" autocomplete="off" style="margin:100px;margin-top: 0px;" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="question">Course</label>
+      {% render_field questionForm.courseID|attr:'required:true' class="form-control form-control-sm rounded-0" %}
+      <br>
+
+      <!-- Add file input for Excel sheet -->
+      <label for="excel_file">Upload Excel Sheet</label>
+      <input type="file" name="excel_file" accept=".xlsx, .xls" class="form-control-file" required>
+      <br>
+
+     
+    <button type="submit" class="btn btn-success" style="border-radius:0px;">Submit Question</button>
+  </form>
+  <br><br><br>
+{% endblock content %}

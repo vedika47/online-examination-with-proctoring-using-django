@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}"> <!-- Link to your external CSS file -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background:#dbd8e3; /* Gradient background (Navy Blue to Dark Blue) */
+      color: #fff; /* White text */
+    }
+
+             
+    .btn-grad {
+            background-image: linear-gradient(to right, #4776E6 0%, #8E54E9  51%, #4776E6  100%);
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+          }
+
+          .btn-grad:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+         
+    .jumbotron {
+      min-height:600px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(115.7deg, rgb(3, 79, 135) 6.2%, rgb(0, 184, 214) 112.9%);
+      color: #fff; /* White text */
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      animation: fadeInUp 1s ease-out;
+      
+    }
+
+    .jumbotron h2 {
+      font-size: 3rem;
+      color: #e74c3c; /* Change the color to a specific color, e.g., Red */
+    }
+
+    .display-4 {
+      font-size: 2rem;
+    }
+
+    .lead {
+      font-size: 1.5rem;
+    }
+
+    .btn-info {
+      padding: 10px 30px;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      background: linear-gradient(to right, #e74c3c, #c0392b); /* Gradient background (Red to Dark Red) */
+      color: #fff; /* White text */
+      border: none;
+      transition: background 0.3s ease;
+    }
+
+    .btn-info:hover {
+      background: linear-gradient(to right, #d35400, #e67e22); /* Gradient background (Orange to Dark Orange) */
+    }
+
+    .spacer {
+      height: 50px;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+  <title>Online Examination System</title>
+</head>
+
+<body>
+
+  {% include "exam/navbar.html" %}
+
+  <section id="section-jumbotron" class="jumbotron">
+    <div class="container text-center">
+      <h2 class="display-3 text-info">Online Examination System</h2>
+      <p class="display-4 d-none d-sm-block">Attend your examinations online!</p>
+      <p class="lead">Sign Up now to start your first online examination</p>
+
+      <p><strong> Start Your Journey Here:</strong></p>
+      <a href="/student/studentsignup" class="btn btn-grad">
+        <i class="fa fa-graduation-cap" aria-hidden="true"></i> Sign Up as Student
+      </a>
+
+      <div class="spacer"></div>
+    </div>
+  </section>
+
+  {% include "exam/footer.html" %}
+
+</body>
+
+</html>

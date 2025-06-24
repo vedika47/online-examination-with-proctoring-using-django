@@ -1,0 +1,31 @@
+<!-- myapp/templates/myapp/my_template.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tkinter Interface</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .tkinter-container {
+            margin: 20px auto;
+            width: 400px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        /* Add more CSS styles as needed */
+    </style>
+</head>
+<body>
+    <div class="tkinter-container">
+        <!-- Display the base64-encoded image -->
+        <img src="data:image/png;base64,{{ image }}" alt="Tkinter Screenshot">
+    </div>
+</body>
+</html>

@@ -1,0 +1,144 @@
+{% extends 'exam/adminbase.html' %}
+{% load widget_tweaks %}
+{% block content %}
+
+
+<head>
+  <style type="text/css">
+    a:link {
+        text-decoration: none;
+    }
+
+    .order-card {
+        color: rgb(255, 255, 255);
+    }
+
+    .bg-c-blue {
+            background: linear-gradient(to right, rgb(173, 83, 137), rgb(60, 16, 83));
+            transition: background 0.3s ease-in-out;
+        }
+
+        .bg-c-blue:hover {
+            background: linear-gradient(to right, rgb(95, 39, 59), rgb(26, 7, 36)); /* Darker shade on hover */
+        }
+
+        .bg-c-green {
+            background: linear-gradient(87.4deg, rgb(255, 241, 165) 1.9%, rgb(200, 125, 76) 49.7%, rgb(83, 54, 54) 100.5%);
+            transition: background 0.3s ease-in-out;
+        }
+
+        .bg-c-green:hover {
+            background: linear-gradient(87.4deg, rgb(119, 98, 98) 1.9%, rgb(78, 52, 52) 49.7%, rgb(41, 34, 34) 100.5%); /* Darker shade on hover */
+        }
+
+        .bg-c-yellow {
+            background: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+            transition: background 0.3s ease-in-out;
+        }
+
+        .bg-c-yellow:hover {
+            background: linear-gradient(to right, rgb(102, 129, 79), rgb(36, 98, 104)); /* Darker shade on hover */
+        }
+
+        .bg-c-pink {
+            background: linear-gradient(110.6deg, rgb(156, 116, 129) -18.3%, rgb(67, 54, 74) 16.4%, rgb(47, 48, 67) 68.2%, rgb(27, 23, 36) 99.1%);
+            transition: background 0.3s ease-in-out;
+        }
+
+        .bg-c-pink:hover {
+            background: linear-gradient(110.6deg, rgb(92, 71, 79) -18.3%, rgb(40, 32, 44) 16.4%, rgb(28, 29, 44) 68.2%, rgb(16, 13, 21) 99.1%); /* Darker shade on hover */
+        }
+
+    .card {
+        -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+        box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+        margin-bottom: 30px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .card:hover {
+        transform: scale(1.05); /* Increase size on hover */
+    }
+
+    .card .card-block {
+        padding: 25px;
+    }
+
+    .order-card i {
+        font-size: 26px;
+    }
+
+    .f-left {
+        float: left;
+    }
+
+    .f-right {
+        float: right;
+    }
+
+    header {
+        left: 0px;
+        right: 0px;
+    }
+</style>
+  </head>
+<br><br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-xl-3">
+        <a href="admin-view-student" style="text-decoration: none;color:white;">
+        <div class="card bg-c-pink order-card">
+          <div class="card-block">
+            <h6 class="m-b-20">Registered Students </h6>
+            <h2 class="text-right"><i class="fas fa-user-graduate f-left"></i><span>{{total_student}}</span></h2>
+          </div>
+        </div>
+      </a>
+      </div>
+      
+  
+      <div class="col-md-4 col-xl-3">
+        <a href="admin-view-teacher" style="text-decoration: none;color:white;">
+        <div class="card bg-c-green order-card">
+          <div class="card-block">
+            <h6 class="m-b-20">Total Teachers </h6>
+            <h2 class="text-right"><i class="fas fa-chalkboard-teacher f-left"></i><span>{{total_teacher}}</span></h2>
+          </div>
+        </div>
+      </a>
+      </div>
+  
+      <div class="col-md-4 col-xl-3">
+        <a href="admin-view-course" style="text-decoration: none;color:white;">
+        <div class="card bg-c-blue order-card">
+          <div class="card-block">
+            <h6 class="m-b-20">Total Courses</h6>
+           <h2 class="text-right"><i class="fas fa-book f-left"></i><span>{{total_course}}</span></h2> 
+          </div>
+        </div>
+      </a>
+      </div>
+  
+      <div class="col-md-4 col-xl-3">
+        <a href="admin-view-question" style="text-decoration: none;color:white;">
+        <div class="card bg-c-yellow order-card">
+          <div class="card-block">
+            <h6 class="m-b-20">Available Questions</h6>
+            <h2 class="text-right"><i class="fas fa-question-circle f-left"></i><span>{{total_question}}</span></h2>
+          </div>
+        </div>
+      </a>
+      </div>
+
+      
+    </div>
+  </div>
+
+
+<br><br><br><br><br><br><br><br><br><br>
+
+<script src="http://netdna.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+
+
+{% endblock content %}
